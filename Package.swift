@@ -44,14 +44,6 @@ let package = Package(
       targets: ["FirebaseAppCheck"]
     ),
     .library(
-      name: "FirebaseFirestoreCombineSwift-Beta",
-      targets: ["FirebaseFirestoreCombineSwift"]
-    ),
-    .library(
-      name: "FirebaseFunctionsCombineSwift-Beta",
-      targets: ["FirebaseFunctionsCombineSwift"]
-    ),
-    .library(
       name: "FirebaseAppDistribution-Beta",
       targets: ["FirebaseAppDistributionTarget"]
     ),
@@ -63,6 +55,10 @@ let package = Package(
     // .library(
     //   name: "FirebaseAuthCombineSwift-Beta",
     //   targets: ["FirebaseAuthCombineSwift"]
+    // ),
+    // .library(
+    //   name: "FirebaseFirestoreCombineSwift-Beta",
+    //   targets: ["FirebaseFirestoreCombineSwift"]
     // ),
     // .library(
     //   name: "FirebaseFunctionsCombineSwift-Beta",
@@ -147,7 +143,7 @@ let package = Package(
     .package(
       name: "GoogleAppMeasurement",
       url: "https://github.com/google/GoogleAppMeasurement.git",
-      .exact("8.1.1")
+      .exact("8.3.0")
     ),
     .package(
       name: "GoogleDataTransport",
@@ -295,8 +291,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "FirebaseAnalytics",
-      url: "https://dl.google.com/firebase/ios/swiftpm/8.1.1/FirebaseAnalytics.zip",
-      checksum: "e1327203fc41fafe9d5dc7e49ce078763387046e82a7a50ba1bf3e6329130d21"
+      url: "https://dl.google.com/firebase/ios/swiftpm/8.3.0/FirebaseAnalytics.zip",
+      checksum: "3225b785ef2884889b41216150d000ccac3aa9d5e9bebbd993a63725503949e5"
     ),
     .target(
       name: "FirebaseAnalyticsSwiftTarget",
@@ -408,7 +404,6 @@ let package = Package(
         "FirebaseAuthCombineSwift",
         "FirebaseFirestoreCombineSwift",
         "FirebaseFunctionsCombineSwift",
-        "FirebaseFunctionsCombineSwift",
         "FirebaseStorageCombineSwift",
       ],
       path: "FirebaseCombineSwift/Sources/Core"
@@ -422,11 +417,6 @@ let package = Package(
       name: "FirebaseFirestoreCombineSwift",
       dependencies: ["FirebaseFirestore", "FirebaseFirestoreSwift"],
       path: "FirebaseCombineSwift/Sources/Firestore"
-    ),
-    .target(
-      name: "FirebaseFunctionsCombineSwift",
-      dependencies: ["FirebaseFunctions"],
-      path: "FirebaseCombineSwift/Sources/Functions"
     ),
     .target(
       name: "FirebaseStorageCombineSwift",
